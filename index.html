@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" 
+        integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" 
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style1.css">
+    <title>MasterMind</title>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <header>
+                        <h1 class="display-4 text-center">"MasterMind"</h1>
+                        <h4 id="task">   
+                            <i class="fas fa-smile"></i>
+                            Try to guess by clicking which color each of these circles 
+                        </h4>
+                </header>
+                
+                
+                <div  id="btns" class="btn-group-lg mb-4" >
+                        <i id="first" class="fas fa-question-circle"></i>
+                        <i  id="second" class="fas fa-question-circle"></i> 
+                        <i  id="third" class="fas fa-question-circle"></i>
+                        <i  id="forth" class="fas fa-question-circle"></i>
+                </div>
+
+                
+                <button id="check" type="button" class="btn btn-dark">
+                                Check up your guess</button>
+                        
+                <div id="attempts"></div>
+                <div id="results"></div>
+                <button id="newGame" type="button" class="btn btn-dark">
+                                New Game</button>
+                <hr>
+                <p id="footer"></p>
+            </div>
+        </div>  
+    </div>
+
+        
+    <script src="main.js"></script>
+</body>
+</html>
