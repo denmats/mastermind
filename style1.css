@@ -1,6 +1,6 @@
 body
 {
-    background: url('bg.png'); /* Background pattern from Toptal Subtle Patterns */
+    background: url('./img/bg.png'); /* Background pattern from Toptal Subtle Patterns */
 }
 
 .row
@@ -45,10 +45,9 @@ h4
     text-align: center;
 }
 
-#check
+#check, #cleanResults
 {
     cursor: pointer;
-    margin-left: 20px;
 }
 
 
@@ -58,7 +57,7 @@ h4
     margin-left:5px;
 }
 
-button[type="button"]
+#check, #newGame
 {
     width:100%;
     height: 1.25em;

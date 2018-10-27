@@ -1,54 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" 
-        integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" 
-        crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style1.css">
-    <title>MasterMind</title>
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="style1.css">
+  <title>MasterMind</title>
 </head>
+
 <body>
-    <div class="container">
+  <div class="card">
+    <div class="card-header">
+      <div class="pos-f-t">
+        <div class="collapse" id="navbarToggleExternalContent">
+          <div class="bg-dark p-4">
+            <h5 class="text-white h4">Gamer's Ranking<span id="cleanResults" class="badge badge-danger ml-2">Clean
+              Results</span></h5>
+            <span class="text-white">
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Result</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </span>
+          </div>
+        </div>
+        <nav class="navbar navbar-dark bg-dark">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+            aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </nav>
+      </div>
+
+      <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <header>
-                        <h1 class="display-4 text-center">"MasterMind"</h1>
-                        <h4 id="task">   
-                            <i class="fas fa-smile"></i>
-                            Try to guess by clicking which color each of these circles 
-                        </h4>
-                </header>
-                
-                
-                <div  id="btns" class="btn-group-lg mb-4" >
-                        <i id="first" class="fas fa-question-circle"></i>
-                        <i  id="second" class="fas fa-question-circle"></i> 
-                        <i  id="third" class="fas fa-question-circle"></i>
-                        <i  id="forth" class="fas fa-question-circle"></i>
+          <div class="col-12">
+            <div class="card-body">
+              <div class="card-title">
+                <h1 class="display-4 text-center">"MasterMind"</h1>
+                <h4 id="task">
+                  <p class="card-text">
+                    <!-- <i class="fas fa-book"></i> -->
+                    Try to guess by clicking which color each of these circles.</p>
+                </h4>
+              </div>
+
+
+              <div id="btns" class="btn-group-lg mb-4">
+                <i id="first" class="fas fa-question-circle"></i>
+                <i id="second" class="fas fa-question-circle"></i>
+                <i id="third" class="fas fa-question-circle"></i>
+                <i id="forth" class="fas fa-question-circle"></i>
+              </div>
+
+              <form id="form">
+                <div class="form-row align-items-center">
+                  <div class="col-sm-3 my-1">
+                    <label class="sr-only" for="inlineFormInputGroupUsername">Username</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <!-- <i class="fas fa-user"></i> -->
+                        </div>
+                      </div>
+                      <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
+                    </div>
+                  </div>
+                  <div class="col-auto">
+                    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                  </div>
                 </div>
+              </form>
 
-                
-                <button id="check" type="button" class="btn btn-dark">
-                                Check up your guess</button>
-                        
-                <div id="attempts"></div>
-                <div id="results"></div>
-                <button id="newGame" type="button" class="btn btn-dark">
-                                New Game</button>
-                <hr>
-                <p id="footer"></p>
+              <button id="check" type="button" class="btn btn-dark">Check up </button>
+
+              <div id="attempts"></div>
+              <div id="results"></div>
+              <button id="newGame" type="button" class="btn btn-dark">New Game</button>
+              <hr>
+              <p id="footer"></p>
             </div>
-        </div>  
-    </div>
 
-        
-    <script src="main.js"></script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script>
+    //  Get the current year for the copyright
+    $('#year').text(new Date().getFullYear());
+  </script>
+  <script src="main.js"></script>
 </body>
+
 </html>
