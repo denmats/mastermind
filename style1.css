@@ -1,6 +1,7 @@
-body, .card-header
+.card-header
 {
     background: url('./img/bg.png'); /* Background pattern from Toptal Subtle Patterns */
+    heigth: 100vh;
 }
 
 .row
