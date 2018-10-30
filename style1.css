@@ -1,3 +1,8 @@
+body
+{
+    background: url('./img/bg.png'); /* Background pattern from Toptal Subtle Patterns */
+}
+
 .card-header
 {
     background: url('./img/bg.png'); /* Background pattern from Toptal Subtle Patterns */
